@@ -15,9 +15,9 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(express.static('public'))
+//app.use(express.static('public'))
 
-app.use(express.static(path.join(__dirname, '/frontend/build')));
+//app.use(express.static(path.join(__dirname, '/frontend/build')));
 
 app.all('/*',function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -42,8 +42,8 @@ db.mongoose
 
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'))
-  //res.json({ message: "Welcome." });
+  //res.sendFile(path.join(__dirname, '/frontend/build', 'index.html'))
+  res.json({ message: "Welcome." });
 });
 
 require("./app/routes/turorial.routes")(app);
