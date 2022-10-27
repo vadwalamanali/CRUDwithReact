@@ -126,7 +126,7 @@ const Tutorial = props => {
       ) : (
         <div>
           <br />
-          <p>Please click on a Tutorial...</p>
+          <p>Please click on a manali...</p>
         </div>
       )}
     </div>
